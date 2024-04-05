@@ -1,0 +1,48 @@
+/* Style the Kendo UI Grid */
+.k-grid {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Style the Grid Header */
+.k-grid-header {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style the Grid Rows */
+.k-grid tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.k-grid tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* Style the Grid Columns */
+.k-grid th {
+  text-align: left;
+  padding: 10px;
+}
+
+/* Style the Grid Commands */
+.k-grid-command {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the Grid Edit and Delete Buttons */
+button[kendoGridEditCommand], button[kendoGridRemoveCommand], button[kendoGridSaveCommand], button[kendoGridCancelCommand] {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button[kendoGridEditCommand]:hover, button[kendoGridRemoveCommand]:hover, button[kendoGridSaveCommand]:hover, button[kendoGridCancelCommand]:hover {
+  background-color: #0056b3;
+}

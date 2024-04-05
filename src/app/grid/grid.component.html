@@ -1,0 +1,16 @@
+<kendo-grid [data]="gridView" [pageSize]="pageSize" [skip]="skip" [sort]="sort" [sortable]="true" [pageable]="true" [filterable]="true"
+  (pageChange)="pageChange($event)" (sortChange)="sortChange($event)">
+  <kendo-grid-column field="fname" title="FirstName"></kendo-grid-column>
+  <kendo-grid-column field="lname" title="LastName"></kendo-grid-column>
+  <kendo-grid-column field="email" title="Phone"></kendo-grid-column>
+  <kendo-grid-column field="phone" title="Phone"></kendo-grid-column>
+  <kendo-grid-column field="description" title="Description"></kendo-grid-column>
+  <kendo-grid-command-column title="Commands", ColumnBase.width: number="220">
+    <ng-template kendoGridCellTemplate let-isNew="isNew">
+      <button kendoGridEditCommand>Edit</button>
+      <button kendoGridRemoveCommand>Delete</button>
+      <button kendoGridSaveCommand *ngIf="isNew">Add</button>
+      <button kendoGridCancelCommand *ngIf="isNew">Cancel</button>
+    </ng-template>
+  </kendo-grid-command-column>
+</kendo-grid>
